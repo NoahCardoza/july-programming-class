@@ -9,10 +9,6 @@ from math import floor
 # get your token at http://51.38.128.213:3000/
 token = '3f53fd3ad126c655a28b29e62cb32585'
 
-# token = '82544e96a6ad7bde498b0ec70fdeae6a' # remote
-# token = '0a331892fa8d23aa99fce769fe2b72d0' # local
-
-
 percentageThreshold = 5 / 100 # 5%
 lastSellPrice = 0
 lastPurchasePrice = 0
