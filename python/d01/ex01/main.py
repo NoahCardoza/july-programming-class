@@ -7,9 +7,13 @@ from math import floor
 # press ctrl-c to quit
 
 # get your token at http://51.38.128.213:3000/
-token = ''
+token = '3f53fd3ad126c655a28b29e62cb32585'
 
-percentageThreshold = 5 / 100 # 10%
+# token = '82544e96a6ad7bde498b0ec70fdeae6a' # remote
+# token = '0a331892fa8d23aa99fce769fe2b72d0' # local
+
+
+percentageThreshold = 5 / 100 # 5%
 lastSellPrice = 0
 lastPurchasePrice = 0
 
@@ -19,8 +23,7 @@ s.headers.update({
 })
 
 def url(path):
-    # 'http://51.38.128.213:3000'
-    return 'http://localhost:3000' + path
+    return 'http://51.38.128.213:3000' + path
 
 def getPrice():
     return s.get(url('/price')).json()['value']
@@ -84,7 +87,7 @@ while True:
     else: # time to sell btc
         profit = btc * price
         if lastPurchasePrice:
-            print ('Could sell at a gain of {}%'.format(round(100 - (lastPurchasePrice / price * 100))))
+            print ('Could sell at a gain of {}%'.format(round(100 - (lastPurchasePrice / price * 100))))]
         if price * (1 - percentageThreshold) > lastPurchasePrice:
             if sellBtc(btc).status_code == 200:
                 if lastPurchasePrice:
