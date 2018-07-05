@@ -9,7 +9,7 @@ from math import floor
 # get your token at http://51.38.128.213:3000/
 token = ''
 
-percentageThreshold = 5 / 100 # 10%
+percentageThreshold = 5 / 100 # 5%
 lastSellPrice = 0
 lastPurchasePrice = 0
 
@@ -19,8 +19,7 @@ s.headers.update({
 })
 
 def url(path):
-    # 'http://51.38.128.213:3000'
-    return 'http://localhost:3000' + path
+    return 'http://51.38.128.213:3000' + path
 
 def getPrice():
     return s.get(url('/price')).json()['value']
