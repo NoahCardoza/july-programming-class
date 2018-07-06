@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css">
+    <title>BTC Market | Dashboard</title>
+
+    <!-- Axios a promise based HTTP client for the browser and node.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+  </head>
+  <body>
+    <div>Price per BTC: <span id='btc-price'>0</span></div>
+    <!-- this is what the user sees at first -->
+    <div id="token-form">
+        <input id="token" type="text" placeholder=":token:" value="82544e96a6ad7bde498b0ec70fdeae6a"/>
+        <button id="save-token">Connect</button>
+        <div id="token-error">This token is invalid!</div>
+    </div>
+    <!-- if they enter a valid token we unhide this section and hide the one above -->
+    <div id="app">
+      <table>
+        <tbody>
+          <tr>
+            <td>BTC:</td>
+            <td id='btc'>0</td>
+            <td>
+              <input id='amount'/>
+            </td>
+            <td><button id='buy'>Buy</button></td>
+            <td><button id='sell'>Sell</button></td>
+          </tr>
+          <tr>
+            <td>Bank:</td>
+            <td>$<span id='balance'>0</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="log">
+
+      </div>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

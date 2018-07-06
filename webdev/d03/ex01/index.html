@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- The littel icon in the tab -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Axios a promise based HTTP client for the browser and node.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+  <title>BTC Market | Dashboard</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">BTC Market Dashboard</a>
+    <span class="navbar-text">
+      1 BTC = $<span id="btc-price"></span>
+    </span>
+  </nav>
+  <div id="token-model" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">API Token</h5>
+        </div>
+        <div class="modal-body">
+          <div class="row justify-content-center">
+            <div id="token-error" class="alert alert-danger w-100 mx-3 d-none" role="alert">
+              This token is invalid!
+            </div>
+          </div>
+          <div class="align-items-center">
+            <div class="input-group w-100">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Token</span>
+              </div>
+              <input spellcheck="false" id="token" type="text" class="form-control" value="0a331892fa8d23aa99fce769fe2b72d0">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="save-token" class="btn btn-primary">Connect</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="app" class="container h-100 mt-3">
+    <div class="row">
+      <div class="col">
+        BTC: <span id='btc'>0</span>
+      </div>
+      <div class="col">
+        Bank: $<span id='balance'>0</span>
+      </div>
+    </div>
+    <div class="row justify-content-center p-3">
+      <div class="input-group mb-3">
+        <input id="amount" type="number" class="form-control" placeholder=":btc:">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-primary" id='buy'>Buy</button>
+          <button type="button" class="btn btn-primary border-left" id='sell'>Sell</button>
+        </div>
+      </div>
+    </div>
+    <div id="log">
+
+    </div>
+  </div>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

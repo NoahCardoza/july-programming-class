@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+      header {
+        text-align: center;
+        background-color: #2887CC;
+        padding: 20px;
+      }
+
+      nav {
+        background-color: #22D789;
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        padding: 20px 30px;
+        text-decoration: none;
+        color: #000;
+      }
+
+      nav a:hover {
+        background-color: #5FF4B4;
+      }
+
+      .aboutme {
+        margin-top: 30px;
+        width: 80%;
+        max-width: 600px;
+        background-color: #BD5EE4;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        padding: 20px 40px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome!</h1>
+    </header>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+    <section>
+      <div class="aboutme">
+        <h3>About Me!</h3>
+        Click the button to get today's date!
+        <button type="button" id="mybutton">Click</button>
+        <div class="jsout"></div>
+        <img src="https://i.ebayimg.com/images/g/htcAAOSwBq1ZlI2C/s-l300.jpg" alt="My Computer">
+        This is the about me block.
+      </div>
+    </section>
+    <script>
+      const sayHello = (name, age) => {
+        console.log('Hello', name + '. You are ' + age + ' years old.');
+      }
+
+      sayHello('Anthony', 11)
+      sayHello('Jasper', 10)
+      sayHello('Noah', 17)
+      document.querySelector('#mybutton').addEventListener('click', () => {
+        document.querySelector('.jsout').innerText = (new Date()).toString();
+      })
+    </script>
+  </body>
+</html>

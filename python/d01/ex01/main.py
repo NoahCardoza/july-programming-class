@@ -7,19 +7,22 @@ from math import floor
 # press ctrl-c to quit
 
 # get your token at http://51.38.128.213:3000/
-token = '3f53fd3ad126c655a28b29e62cb32585'
+token = ''
 
+# used to evaluate a profitable buy or sell
 percentageThreshold = 5 / 100 # 5%
 lastSellPrice = 0
 lastPurchasePrice = 0
 
+# this is a little shortcut in the requests module so the `authorization` header
+# is included in all of our requests
 s = requests.Session()
-s.headers.update({
-    'authorization': 'Bearer ' + token
-})
+s.headers.update({ 'authorization': 'Bearer ' + token })
 
-def url(path):
-    return 'http://51.38.128.213:3000' + path
+# `.format` will return a function which when called will replace {} with the
+# the first argument
+
+url = 'http://51.38.128.213:3000{}'.format
 
 def getPrice():
     return s.get(url('/price')).json()['value']
