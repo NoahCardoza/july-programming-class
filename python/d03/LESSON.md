@@ -5,7 +5,7 @@ to be made. Each class instance can have attributes attached to it for
 maintaining its state. Class instances can also have methods
 (defined by its class) for modifying its state.
 >
-> --- Python Docs
+> — Python Docs
 
 ## IRL Example: [`requests.Session`](http://docs.python-requests.org/en/master/user/advanced/)
 
