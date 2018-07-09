@@ -24,4 +24,4 @@ else:
     print ("Sorry, that's not one of the options. What a rebel!")
     exit()
 
-print ("the area of your " + shape + " is " + str(area) + ".")
+print ("The area of your " + shape + " is " + str(area) + " units.")

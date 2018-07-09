@@ -5,6 +5,7 @@ These are all of the basic types of data you will deal with in Python.
 > A whole number; a number that is not a fraction.
 
 ```py
+int()           #
 1 + 1           # 2
 8 - 1           # 7
 10 * 2          # 20
@@ -22,6 +23,7 @@ type(1)         # <class 'int'>
 Any decimal number.
 
 ```py
+float()         #
 5.4 + 3         #  8.3
 type(.1)        #  <class 'float'>
 x = 0.5 + 0.5   #
@@ -31,17 +33,13 @@ x == 1          #  True
 x is 1          #  False
 int(x) == 1     #  True
 ```
-## Booleans (True/False)
-
-```py
-# TODO: Get to this
-```
 
 ## Lists
 
 An indexed collection of items.
 
 ```py
+list()          #
 a = [1, 2, 3]   #
 b = [4]         #
 b.append(5)     #
@@ -68,6 +66,7 @@ a[1:3]          # [3, 4]
 Basically a list of charters with a few extra methods.
 
 ```py
+
 'Hello World!'                # 'Hello World!'
 's' + 'h' * 20 + '!'          # 'shhhhhhhhhhhhhhhhhhhh!'
 s = """
@@ -78,15 +77,36 @@ multiline
 String!"""                    # 'This\nis\na\nmultiline\nstring!\n'
 print(s)                      #
 type(s)                       # <type 'str'>
+x = 42                        #
+type(x)                       # <type 'int'>
+type(str(x))                  # <type 'str'>
 ```
 ## Dictionaries
 
 A collection of key, value pairs.
 
 ```py
+dict()                                #
 person = {'name': 'Noah', 'age': 17}  #
 person['name']                        # 'Noah'
 person['age']                         # 17
+```
+
+## Booleans (True/False)
+
+```py
+True                      # True
+False                     # False
+bool(42)                  # True
+bool(0)                   # False
+bool("string")            # True
+bool("")                  # False
+bool((1, 2, 3))           # True
+bool(())                  # False
+bool([1, 2, 3])           # True
+bool([1, 2, 3])           # False
+bool({ 'name': 'Noah' })  # True
+bool({})                  # False
 ```
 
 # Loops:
@@ -111,7 +131,7 @@ while x > 0:
 ```
 ### For
 
-A special type of loop that passes each item of an iteranble to the block of code defined with in it.
+A special type of loop that passes each item of an iterable to the block of code defined with in it.
 
 ```py
 for value in iterable:
