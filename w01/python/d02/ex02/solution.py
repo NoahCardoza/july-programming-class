@@ -1,7 +1,7 @@
 recharge = 180
 distanceToBase = 8500
 distanceToRange = distanceToBase - 1000
-ships = 3
+ships = 5
 
 token = input("Enter your access token: ")
 
@@ -13,8 +13,6 @@ if token != 'CMDR':
 print ("Verifying...")
 print ("Wellcome to iBoom!\nWith this program you can easily alienate Imperial Starships with just a few clicks of you keybord.")
 print ("WANNING: Galac-Tech Studios can not be held responsible for the loss of your planet due to crazy fast Imperial Starships.")
-print ("How many ships are incoming?")
-
 
 for ship in range(ships):
     print ("What is ship #" + str(ship + 1) + "'s speed in km/h?")

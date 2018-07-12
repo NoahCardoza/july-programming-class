@@ -151,14 +151,14 @@ else:
             distanceToRange = 0
 
         for x in range(loop):
-            print ("What is ship #" + str(x+1) + "'s speed in km/h?")
+            print ("What is ship #" + str(x + 1) + "'s speed in km/h?")
             velocity = float(input(">>> "))
             timeTillImpact = distanceToBase/velocity*60*60
             if timeTillImpact < recharge:
                 fancyError("|","ERROR: RUN!","|")
                 break
             else:
-                timeTillInRange = (distanceToRange/velocity*60*60)
+                timeTillInRange = (distanceToRange / velocity * 60 * 60)
                 if timeTillInRange >= recharge:
                     timeTillShot = timeTillInRange
                 else:

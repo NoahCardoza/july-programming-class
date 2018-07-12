@@ -2,20 +2,20 @@ const prop = key => obj => obj[key]
 const path = keys => obj => keys.reduce((o, key) => o[key], obj, keys)
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: 'http://51.38.128.213:3000/' //'http://localhost:3000'
 })
 
 const pathToValue = path(['data', 'value'])
 
-const getBtcPrice = () => 
+const getBtcPrice = () =>
   api.get('/price')
     .then(pathToValue)
 
-const getBalance = () => 
+const getBalance = () =>
   api.get('/balance')
     .then(pathToValue)
 
-const getMyBtc = () => 
+const getMyBtc = () =>
   api.get('/btc')
     .then(pathToValue)
 
@@ -91,5 +91,5 @@ ui.sell.on('click', () => {
     .catch(errorPathToMessage)
     .then(appendToLog)
     .then(updateUi)
-  
+
 })

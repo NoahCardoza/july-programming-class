@@ -1,4 +1,4 @@
-# Day 0: Assignment
+# Exercise 0: Assignment
 
 ### Area Calculator
 

@@ -1,4 +1,4 @@
-# Day 0: Lesson
+# Exercise 0: Lesson
 
 ## Things you will need to know:
 
