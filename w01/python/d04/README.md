@@ -4,7 +4,7 @@
 | ------------- | ---- |
 | 51.38.128.213 | 7777 |
 
-###Note:
+### Note:
 If you want to use the `upload.py` or `shell.py` you will have to change the ip.
 Just replace `10.0.1.6` with `51.38.128.213`.
 
